@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Vetements1ApplicationTests.testFindVetement" project="vetements-1" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.baha.vetements.Vetements1ApplicationTests" time="0.768" displayname="Vetements1ApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.baha.vetements.Vetements1ApplicationTests]">
+    <testcase name="testFindVetement" classname="com.baha.vetements.Vetements1ApplicationTests" time="0.768" displayname="testFindVetement()" uniqueid="[engine:junit-jupiter]/[class:com.baha.vetements.Vetements1ApplicationTests]/[method:testFindVetement()]">
+      <error>java.util.NoSuchElementException: No value present&#13;
+	at java.base/java.util.Optional.get(Optional.java:143)&#13;
+	at com.baha.vetements.Vetements1ApplicationTests.testFindVetement(Vetements1ApplicationTests.java:27)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

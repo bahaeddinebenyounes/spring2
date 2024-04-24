@@ -1,0 +1,78 @@
+package com.baha.vetements.controller;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.baha.vetements.entities.Vetement;
+import com.baha.vetements.service.VetementService;
+
+
+
+@Controller
+public class VetementController {
+	@Autowired
+	VetementService vetementService;
+
+	@RequestMapping("/ListeProduits")
+	public String listeProduits(ModelMap modelMap) {
+		List<Vetement> prods = vetementService.getAllProduits();
+		modelMap.addAttribute("produits", prods);
+		return "listeProduits";
+	}
+
+	@RequestMapping("/showCreate")
+	public String showCreate() {
+		return "createProduit";
+	}
+
+	@RequestMapping("/saveProduit")
+	public String saveProduit(@ModelAttribute("produit") Vetement produit, @RequestParam("date") String date,
+			ModelMap modelMap) throws ParseException {
+		{ // conversion de la date
+			SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
+			Date dateCreation = dateformat.parse(String.valueOf(date));
+			produit.setDateCreation(dateCreation);
+			Vetement saveProduit = vetementService.saveProduit(produit);
+			String msg = "produit enregistré avec Id " + saveProduit.getIdVetement();
+			modelMap.addAttribute("msg", msg);
+			return "createProduit";
+		}
+	}
+
+	@RequestMapping("/supprimerProduit")
+	public String supprimerProduit(@RequestParam("id") Long id, ModelMap modelMap) {
+		vetementService.deleteProduitById(id);
+		List<Vetement> prods = vetementService.getAllProduits();
+		modelMap.addAttribute("produits", prods);
+		return "listeProduits";
+	}
+
+	@RequestMapping("/modifierProduit")
+	public String editerProduit(@RequestParam("id") Long id, ModelMap modelMap) {
+		Vetement p = vetementService.getProduit(id);
+		modelMap.addAttribute("produit", p);
+		return "editerProduit";
+	}
+
+	@RequestMapping("/updateProduit")
+	public String updateProduit(@ModelAttribute("produit") Vetement produit, @RequestParam("date") String date,
+			ModelMap modelMap) throws ParseException {
+// conversion de la date 
+		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
+		Date dateCreation = dateformat.parse(String.valueOf(date));
+		produit.setDateCreation(dateCreation);
+		vetementService.updateProduit(produit);
+		List<Vetement> prods = vetementService.getAllProduits();
+		modelMap.addAttribute("produits", prods);
+		return "listeProduits";
+	}
+}

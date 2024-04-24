@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Vetements1ApplicationTests.testFindByNomProduitContains" project="vetements-1" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.baha.vetements.Vetements1ApplicationTests" time="0.75" displayname="Vetements1ApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.baha.vetements.Vetements1ApplicationTests]">
+    <testcase name="testFindByNomProduitContains" classname="com.baha.vetements.Vetements1ApplicationTests" time="0.75" displayname="testFindByNomProduitContains()" uniqueid="[engine:junit-jupiter]/[class:com.baha.vetements.Vetements1ApplicationTests]/[method:testFindByNomProduitContains()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.baha.vetements.service.VetementService.getAllVetementsParPage(int, int)" because "this.vetementService" is null&#13;
+	at com.baha.vetements.Vetements1ApplicationTests.testFindByNomProduitContains(Vetements1ApplicationTests.java:55)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

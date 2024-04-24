@@ -1,0 +1,10 @@
+package com.baha.vetements.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class VetementController {
+	@RequestMapping("/myView") 
+	public String myView() { return "myView";  } 
+}

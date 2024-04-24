@@ -1,0 +1,45 @@
+package com.baha.vetements;
+
+import java.util.Date;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.baha.vetements.entities.Vetement;
+import com.baha.vetements.repos.VetementRepository;
+
+@SpringBootTest
+class Vetements1ApplicationTests {
+
+	@Autowired
+	private VetementRepository produitRepository;
+	@Test
+	public void testCreateProduit() {
+	Vetement vet = new Vetement("chasussre adidas",2200.500,new Date());
+	produitRepository.save(vet);
+	}
+	@Test
+	public void testFindVetement()
+	{ Vetement p = produitRepository.findById(1L).get(); System.out.println(p);
+	}
+	@Test
+	public void testUpdateVetement()
+	{ Vetement p = produitRepository.findById(1L).get();
+	p.setPrixVetement(1000.0); produitRepository.save(p);
+	}
+	@Test
+	public void testDeleteVetement()
+	{ produitRepository.deleteById(1L);;
+	}
+	@Test
+	public void testListerTousProduits()
+	{
+	List<Vetement> vets = produitRepository.findAll();
+	for (Vetement p : vets)
+	{
+	System.out.println(p);
+	}
+	}
+}

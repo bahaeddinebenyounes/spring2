@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Vetements1ApplicationTests" project="vetements-1" tests="5" started="5" failures="0" errors="2" ignored="0">
+  <testsuite name="com.baha.vetements.Vetements1ApplicationTests" time="0.867" displayname="Vetements1ApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.baha.vetements.Vetements1ApplicationTests]">
+    <testcase name="testDeleteVetement" classname="com.baha.vetements.Vetements1ApplicationTests" time="0.635" displayname="testDeleteVetement()" uniqueid="[engine:junit-jupiter]/[class:com.baha.vetements.Vetements1ApplicationTests]/[method:testDeleteVetement()]"/>
+    <testcase name="testFindVetement" classname="com.baha.vetements.Vetements1ApplicationTests" time="0.045" displayname="testFindVetement()" uniqueid="[engine:junit-jupiter]/[class:com.baha.vetements.Vetements1ApplicationTests]/[method:testFindVetement()]">
+      <error>java.util.NoSuchElementException: No value present&#13;
+	at java.base/java.util.Optional.get(Optional.java:143)&#13;
+	at com.baha.vetements.Vetements1ApplicationTests.testFindVetement(Vetements1ApplicationTests.java:25)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testListerTousProduits" classname="com.baha.vetements.Vetements1ApplicationTests" time="0.072" displayname="testListerTousProduits()" uniqueid="[engine:junit-jupiter]/[class:com.baha.vetements.Vetements1ApplicationTests]/[method:testListerTousProduits()]"/>
+    <testcase name="testUpdateVetement" classname="com.baha.vetements.Vetements1ApplicationTests" time="0.007" displayname="testUpdateVetement()" uniqueid="[engine:junit-jupiter]/[class:com.baha.vetements.Vetements1ApplicationTests]/[method:testUpdateVetement()]">
+      <error>java.util.NoSuchElementException: No value present&#13;
+	at java.base/java.util.Optional.get(Optional.java:143)&#13;
+	at com.baha.vetements.Vetements1ApplicationTests.testUpdateVetement(Vetements1ApplicationTests.java:29)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testCreateVetement" classname="com.baha.vetements.Vetements1ApplicationTests" time="0.103" displayname="testCreateVetement()" uniqueid="[engine:junit-jupiter]/[class:com.baha.vetements.Vetements1ApplicationTests]/[method:testCreateVetement()]"/>
+  </testsuite>
+</testrun>

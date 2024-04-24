@@ -1,0 +1,14 @@
+package com.baha.vetements.service;
+
+import java.util.List;
+
+import com.baha.vetements.entities.Vetement;
+
+public interface VetementService {
+	Vetement saveProduit(Vetement p);
+	Vetement updateProduit(Vetement p);
+	void deleteProduit(Vetement p);
+	void deleteProduitById(Long id);
+	Vetement getProduit(Long id);
+	List<Vetement> getAllProduits();
+}

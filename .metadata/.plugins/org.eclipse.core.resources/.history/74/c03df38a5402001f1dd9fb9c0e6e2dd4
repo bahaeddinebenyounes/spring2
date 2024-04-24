@@ -1,0 +1,13 @@
+package com.baha.vetements;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Vetements1Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Vetements1Application.class, args);
+	}
+
+}

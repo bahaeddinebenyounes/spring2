@@ -1,0 +1,5 @@
+package com.baha.vetements.entities;
+
+public class Vetement {
+
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Vetements1ApplicationTests.testCreateVetement" project="vetements-1" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.baha.vetements.Vetements1ApplicationTests" time="0.793" displayname="Vetements1ApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.baha.vetements.Vetements1ApplicationTests]">
+    <testcase name="testCreateVetement" classname="com.baha.vetements.Vetements1ApplicationTests" time="0.793" displayname="testCreateVetement()" uniqueid="[engine:junit-jupiter]/[class:com.baha.vetements.Vetements1ApplicationTests]/[method:testCreateVetement()]"/>
+  </testsuite>
+</testrun>

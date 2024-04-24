@@ -1,0 +1,45 @@
+package com.baha.vetements.service;
+
+import java.util.List;
+
+import com.baha.vetements.entities.Vetement;
+import com.baha.vetements.repos.VetementRepository;
+
+public class VetementServiceImpl implements VetementService{
+
+	@Override
+	public VetementService saveProduit(Vetement p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Vetement updateProduit(Vetement p) {
+		return VetementRepository.save(p);
+	}
+
+	@Override
+	public void deleteProduit(Vetement p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteProduitById(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Vetement getProduit(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Vetement> getAllProduits() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

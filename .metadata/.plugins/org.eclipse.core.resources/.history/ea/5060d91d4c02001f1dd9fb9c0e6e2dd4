@@ -1,0 +1,48 @@
+package com.baha.vetements.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.baha.vetements.entities.Vetement;
+import com.baha.vetements.repos.VetementRepository;
+@Service
+public class VetementServiceImpl implements VetementService{
+	 
+	VetementRepository vetementRepository;
+	
+	
+	@Override
+	public Vetement saveProduit(Vetement p) {
+		return 	vetementRepository.save(p);
+	}
+
+	@Override
+	public Vetement updateProduit(Vetement p) {
+		return vetementRepository.save(p);
+	}
+
+	@Override
+	public void deleteProduit(Vetement p) {
+		vetementRepository.delete(p);		
+	}
+
+	@Override
+	public void deleteProduitById(Long id) {
+		vetementRepository.deleteById(id);		
+	}
+
+	@Override
+	public Vetement getProduit(Long id) {
+		// TODO Auto-generated method stub
+		return vetementRepository.findById(id).get();
+	}
+
+	@Override
+	public List<Vetement> getAllProduits() {
+
+		// TODO Auto-generated method stub
+		return vetementRepository.findAll();
+	}
+
+}
